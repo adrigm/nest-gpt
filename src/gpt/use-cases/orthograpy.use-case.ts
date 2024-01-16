@@ -30,7 +30,7 @@ export const orthograpyUseCase = async (openai: OpenAI, options: Options) => {
         content: promt,
       },
     ],
-    model: 'gpt-4',
+    model: 'gpt-3.5-turbo',
     temperature: 0.3,
     max_tokens: 150,
     // response_format: {
