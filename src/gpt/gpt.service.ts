@@ -10,6 +10,8 @@ export class GptService {
   });
 
   async orthograpyCheck(orthograpyDto: OrthograpyDto) {
-    return await orthograpyUseCase(this.openai, { promt: orthograpyDto.promt });
+    return await orthograpyUseCase(this.openai, {
+      prompt: orthograpyDto.prompt,
+    });
   }
 }

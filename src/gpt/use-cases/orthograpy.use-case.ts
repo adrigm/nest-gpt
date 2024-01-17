@@ -1,11 +1,11 @@
 import OpenAI from 'openai';
 
 interface Options {
-  promt: string;
+  prompt: string;
 }
 
 export const orthograpyUseCase = async (openai: OpenAI, options: Options) => {
-  const { promt } = options;
+  const { prompt } = options;
 
   const completion = await openai.chat.completions.create({
     messages: [
@@ -27,7 +27,7 @@ export const orthograpyUseCase = async (openai: OpenAI, options: Options) => {
       },
       {
         role: 'user',
-        content: promt,
+        content: prompt,
       },
     ],
     model: 'gpt-3.5-turbo',
